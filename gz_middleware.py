@@ -35,7 +35,7 @@ class GzMiddleware():
             elif header[0] == 'Content-Length':
                 contentLengthHeader = header
 
-        if contentEncodingHeader is not None or not is_valid_content_type(contentTypeHeader[1])):
+        if contentEncodingHeader is not None or not is_valid_content_type(contentTypeHeader[1]):
             start_response(app['status'], app['headers'], app['exc_info'])
             return content;
 
