@@ -12,7 +12,7 @@ class GzMiddleware():
         self.app = app
 
     def __call__(self, environ, start_response):
-        if "gzip" not in environ["HTTP_ACCEPT_ENCODING"]:
+        if "HTTP_ACCEPT_ENCODING" not in environ or "gzip" not in environ["HTTP_ACCEPT_ENCODING"]:
             return self.app(environ, start_response)
 
         app = { 'status': None, 'headers': None, 'exc_info': None }
