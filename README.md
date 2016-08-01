@@ -14,5 +14,3 @@ pulled off of Wikipedia.
 This is a Bottle-specific decorator that can be added to routes to cause their contents to
 be GZipped.  It has no MIME detection, so only use it on routes that will actually
 benefit from compression.
-
-This can also be found as a [Gist](https://gist.github.com/PlaidPhantom/3b21b0fa3946afbeed42)
